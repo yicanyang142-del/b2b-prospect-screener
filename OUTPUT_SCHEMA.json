@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "total_count": { "type": "integer", "description": "输出企业总数，含淘汰企业" },
+    "prospects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "company_name": { "type": "string", "description": "企业名称" },
+          "final_level": { "type": "string", "enum": ["S级", "A级", "B级"], "description": "最终评级" },
+          "total_score": { "type": "integer", "description": "最终得分" },
+          "is_rejected": { "type": "boolean", "description": "是否被淘汰" },
+          "reject_reason": { "type": "string", "description": "淘汰原因，没有则为空" },
+          "score_details": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "rule_name": { "type": "string", "description": "命中的规则名，如'财务健康度'" },
+                "points": { "type": "integer", "description": "加分数" },
+                "evidence": { "type": "string", "description": "证据，如'CAGR为22%'" }
+              }
+            }
+          },
+          "kp_info": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string", "description": "关键决策人姓名" },
+              "title": { "type": "string", "description": "职务，如大股东/CEO" },
+              "contact_phone": { "type": ["string", "null"], "description": "电话，可为空" },
+              "contact_email": { "type": ["string", "null"], "description": "高管邮箱，可为空" }
+            }
+          }
+        },
+        "required": ["company_name", "total_score", "is_rejected"]
+      }
+    }
+  },
+  "required": ["total_count", "prospects"]
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "company_name": "深圳极光智能制造有限公司",
+    "financials": { "revenue_2021": 1000, "revenue_2022": 1300, "revenue_2023": 1700 },
+    "kp": { "name": "王建国", "title": "实控人", "contact_phone": "13800138000" },
+    "lists": ["2023深圳智能制造百强", "国家级专精特新"],
+    "tenders_last_6_months": 2,
+    "relationships": { "is_supplier_of": "已合作客户A", "competitor_of": null },
+    "crm_status": "未收录"
+  },
+  {
+    "company_name": "杭州老旧器材厂",
+    "financials": { "revenue_2021": 5000, "revenue_2022": 4000, "revenue_2023": 2500 },
+    "kp": { "name": "李强", "title": "法人", "contact_phone": null },
+    "lists": [],
+    "tenders_last_6_months": 0,
+    "relationships": { "is_supplier_of": null, "competitor_of": null },
+    "crm_status": "未收录"
+  },
+  {
+    "company_name": "北京云端SaaS科技",
+    "financials": { "revenue_2021": 200, "revenue_2022": 300, "revenue_2023": 450 },
+    "kp": { "name": "张伟", "title": "CEO", "contact_phone": "010-8888888" },
+    "lists": ["营收倍增计划入选"],
+    "tenders_last_6_months": 0,
+    "relationships": { "is_supplier_of": null, "competitor_of": "已合作客户B" },
+    "crm_status": "跟进中"
+  }
+]
